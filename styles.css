@@ -1,0 +1,233 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+h1, h2, h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+button:active {
+    transform: scale(0.95);
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #0008ff;
+    color: #fff;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+main {
+   
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: calc(300vh - 100%);
+
+
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px; /* Reduz o padding em telas menores */
+        margin-top: calc(130vh - 100%);
+    }
+}
+
+
+/* Adicione ao final do arquivo styles.css */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #392111;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #c9c7c7;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: #392111;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.navbar a:hover {
+    background-color:  #464646;
+    color:rgb(255, 255, 255);
+}
+
+.navbar .menu {
+    display: flex;
+   
+    justify-content: center; /* Centraliza os itens do menu */
+    gap: 3px; /* Adiciona espaçamento entre os itens */
+}
+
+.navbar .menu-icon {
+    display: none; /* Esconde o ícone do menu em telas maiores */
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* Cor do ícone */
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        justify-content: space-between; /* Alinha o ícone e o menu em telas pequenas */
+    }
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 50%;
+    
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 5px 0; /* Adiciona espaçamento interno */
+    }
+
+    .navbar .menu.active {
+        display: flex;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+    }
+}
+
+
+
+
+/* Adicione ao final do arquivo styles.css */
+
+/* Estilo para telas maiores */
+@media (min-width: 768px) {
+    form {
+        width: 800px; /* Aumenta a largura do formulário */
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide o formulário em duas colunas */
+        gap: 5px; /* Espaçamento entre os campos */
+    }
+
+    form label {
+        grid-column: span 2; /* Faz com que os labels ocupem duas colunas */
+    }
+
+    form input[type="text"],
+    form input[type="number"],
+    form textarea {
+        grid-column: span 2; /* Faz com que os inputs ocupem duas colunas */
+    }
+
+    form button {
+        grid-column: span 1; /* Centraliza o botão */
+    }
+}
+
+
+
+
+

@@ -1,0 +1,205 @@
+/* styles.css */
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+/* Navebar*/
+.navbar {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #392111;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #c9c7c7;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: #392111;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.navbar a:hover {
+    background-color:  #464646;
+    color:rgb(255, 255, 255);
+}
+
+.navbar .menu {
+    display: flex;
+   
+    justify-content: center; /* Centraliza os itens do menu */
+    gap: 3px; /* Adiciona espaçamento entre os itens */
+}
+
+.navbar .menu-icon {
+    display: none; /* Esconde o ícone do menu em telas maiores */
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* Cor do ícone */
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        justify-content: space-between; /* Alinha o ícone e o menu em telas pequenas */
+
+        
+    }
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 30%;
+        background-color: #392111af;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 5px 0; /* Adiciona espaçamento interno */
+    }
+    .navbar a {
+        background-color: #ffffff00;
+        color: white;
+
+    }
+
+    .navbar .menu.active {
+        display: flex;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+    }
+}
+
+/* Estilo do título */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo do formulário */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; /* Limita a largura máxima do formulário */
+}
+
+/* Estilo dos rótulos */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+/* Estilo do botão */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Estilo da mensagem de erro */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    display: none; /* Inicialmente oculto */
+}
+
+/* Estilo para links */
+p {
+    text-align: center;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form {
+        width: 95%; /* Aumenta a largura do formulário em telas menores */
+    }
+}
+
+.links {
+    text-align: center;
+}
+
+#voltar-login {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+   
+    justify-content: center; /* Centraliza os itens do menu */
+    gap: 3px; /* Adiciona espaçamento entre os itens */
+  
+    
+
+
+}
+
